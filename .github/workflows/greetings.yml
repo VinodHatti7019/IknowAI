@@ -1,0 +1,43 @@
+name: Greetings
+
+on: [pull_request_target, issues]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: |
+          👋 Welcome to IknowAI! Thanks for opening your first issue!
+          
+          We're excited to have you in our AI community! 🤖✨
+          
+          A maintainer will review your issue soon. In the meantime:
+          - 📚 Check out our [Contributing Guidelines](https://github.com/VinodHatti7019/IknowAI/blob/main/CONTRIBUTING.md)
+          - 💬 Join our [Discussions](https://github.com/VinodHatti7019/IknowAI/discussions) to connect with the community
+          - ❓ Visit our [AMA Discussion](https://github.com/VinodHatti7019/IknowAI/discussions/2) for AI questions
+          - 🌟 Don't forget to star the repo if you find it helpful!
+          
+          Happy contributing! 🚀
+        pr-message: |
+          🎉 Congratulations on opening your first Pull Request in IknowAI!
+          
+          Thank you for contributing to our AI community! 🤖💡
+          
+          Here's what happens next:
+          1. A maintainer will review your PR shortly
+          2. We may request changes or ask questions
+          3. Once approved, your contribution will be merged!
+          
+          While you wait:
+          - ✅ Ensure all tests pass
+          - 📖 Review our [Contributing Guidelines](https://github.com/VinodHatti7019/IknowAI/blob/main/CONTRIBUTING.md)
+          - 💬 Feel free to ask questions in the comments
+          - 🌟 Star the repo to show your support!
+          
+          We appreciate your contribution to the AI community! 🙌
